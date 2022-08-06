@@ -40,6 +40,12 @@ input::placeholder{
     font-size: 16px;
 }
 
+.button__wrapper{
+    display: flex;
+    justify-content: end;
+    margin-top: 1rem;
+}
+
 button{
     background-color: #1b31a8;
     border-radius: 32px;
@@ -50,11 +56,13 @@ button{
     font-size: 16px;
     line-height: 20px;
     padding: 11px 20px;
-    width: 30%;
+    
     display: flex;
     justify-content: center;
     cursor: pointer;
 }
+
+
 
 /* output section */
 .output__container{
@@ -85,3 +93,19 @@ p{
 p span{
     font-weight: 500;
 }
+
+@media all and (max-width: 850px){
+    .input__container{
+        width: 100%;
+        padding: 0 40px
+    }
+
+    .input__wrapper{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button__wrapper{
+        justify-content: center;
+    }
+  }

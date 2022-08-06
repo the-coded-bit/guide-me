@@ -12,9 +12,6 @@ function InputContextProvider({ children }) {
     // state to maintain the markers
     const [markers, setMarkers] = useState([]);
 
-    // state to hold directions response
-    const [directions, setDirections] = useState(null);
-
     // calculate route button
     const calculateRoute = async (source, destination) => {
         if (source === '' || destination === '') return;
@@ -65,6 +62,8 @@ function InputContextProvider({ children }) {
             setDistance(response.routes[0].summary.lengthInMeters / 1000);
            
         } catch (err) {
+            markers.forEach(marker => marker.remove());
+            alert('no route found');
             console.log(err);
         }
 

@@ -1,6 +1,7 @@
 .app__header{
+  display: flex;
+  justify-content: center;
   margin-top: 33px;
-  text-align: center;
   font-family: 'Work Sans';
   font-weight: 400;
   line-height: 24px;
@@ -10,6 +11,7 @@
 
 .app__header__span{
   font-weight: 600;
+  margin: 0 5px;
 }
 
 .app__main{
@@ -17,4 +19,18 @@
   height: 400px;
   padding: 0 156px;
   justify-content: space-evenly;
+}
+
+@media all and (max-width: 850px){
+  .app__main{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    overflow: scroll;
+    padding-right: 20px;
+  }
 }

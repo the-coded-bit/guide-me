@@ -45,7 +45,7 @@ function Input() {
 
             </div>
             {/* calculate button */}
-            <div style={{ display: 'flex', justifyContent: 'end' }}>
+            <div className='button__wrapper'>
                 <button onClick={() => calculateRoute(source, destination)}>calculate</button>
             </div>
 

@@ -1,5 +1,5 @@
 import tt from '@tomtom-international/web-sdk-maps';
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import { InputContext } from '../../utils/contexts/InputContext';
 import './map.css';
 
@@ -11,7 +11,7 @@ const center = {
 
 
 function Map() {
-    const { source, destination, map, setMap } = useContext(InputContext);
+    const { setMap } = useContext(InputContext);
     const mapElement = useRef();
 
     useEffect(() =>{
